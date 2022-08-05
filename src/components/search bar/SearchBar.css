@@ -5,7 +5,7 @@
     flex-flow: row nowrap;
     align-items: center;
     background-color: white;
-    box-shadow: 0px 0px 3px 0px lightgray;
+    justify-content: space-between;
     height: 50px;
     padding-left: 25px;
     border-radius: 3px;
@@ -18,14 +18,30 @@
 }
 
 .searchBarMain input{
-    width: 400px;
+    width: 410px;
     border-style: none;
     outline: none;
     color: hsl(0, 0%, 52%);
 }
 
 .searchBarMain input::placeholder{
-    color: hsl(0, 0%, 52%);
     font-family: "Nunito Sans", sans-serif;
     font-size: 1.06em;
 }
+
+.lightText::placeholder{
+    color: hsl(0, 0%, 52%);
+}
+
+.darkText::placeholder{
+    color: hsl(0, 0%, 100%);
+}
+
+.middleSection{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 145px;
+    padding-left: 80px;
+  }

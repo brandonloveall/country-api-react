@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+.filterMain{
+    margin-right: 80px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainTab{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 3px;
+}
+
+.mainTab:hover{
+    cursor: pointer;
+}
+
+.mainTab p{
+    color: hsl(200, 15%, 8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+}
+
+.mainTab img{
+    height: 18%;
+    aspect-ratio: 1/1;
+}
+
+.countryList{
+    flex-flow: column nowrap;
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border-radius: 3px;
+}
+
+.countryList p{
+    margin-top: 4.5px;
+    margin-bottom: 4.5px;
+    font-family: "Nunito Sans", sans-serif;
+    margin-left: 30px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.countryList p:hover{
+    cursor: pointer;
+}

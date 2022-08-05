@@ -1,0 +1,25 @@
+.colorThemeSwitch{
+    height: 20px;
+    background: transparent;
+    border-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .colorThemeSwitch:hover{
+    cursor:pointer;
+  }
+  
+  .colorThemeSwitch p{
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .colorThemeSwitch img{
+    aspect-ratio: 1/1;
+    height: 100%;
+    margin-right: 12px;
+  }
