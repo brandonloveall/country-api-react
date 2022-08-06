@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import SearchBar from "./components/search bar/SearchBar"
 import ThemeProvider from "./store/ThemeProvider"
 import Header from './components/header/Header';
+import CountryMenu from "./components/country menu/CountryMenu.jsx"
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <Header />
-          <SearchBar />
+        <SearchBar />
+        <CountryMenu />
       </div>
     </ThemeProvider>
 

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+.countryCard{
+    height: 335px;
+    width: 265px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-bottom: 70px
+}
+
+.countryCard img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.countryCardInfo{
+    height: 250px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-left: 22px;
+    padding-right: 20px;
+    padding-top: 27px;
+}
+
+.countryCardInfo h4{
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.countryCardInfo p{
+    margin-top: 17px;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+    line-height: 12px;
+}
+
+.bold{
+    font-weight: 600;
+}

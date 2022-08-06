@@ -3,7 +3,13 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: hsl(0, 0%, 98%);
+}
+
+.App{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: column nowrap;
 }
 
 h2{
@@ -20,20 +26,4 @@ h2{
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-}
-
-.colorThemeSwitch:hover{
-  cursor:pointer;
-}
-
-.colorThemeSwitch p{
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.colorThemeSwitch img{
-  aspect-ratio: 1/1;
-  height: 100%;
-  margin-right: 12px;
 }

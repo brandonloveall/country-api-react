@@ -63,7 +63,6 @@ function ThemeProvider(props) {
 
     function switchThemes() {
         dispatchThemeState()
-        console.log(themeState)
     }
 
     const themeContext = {
