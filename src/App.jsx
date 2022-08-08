@@ -12,7 +12,6 @@ function App() {
     <ThemeProvider>
       <div className="App">
         <Header />
-        <SearchBar />
         <CountryMenu />
       </div>
     </ThemeProvider>
