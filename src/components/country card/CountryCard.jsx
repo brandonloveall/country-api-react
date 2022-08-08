@@ -7,7 +7,8 @@ function CountryCard(props){
 
     return(
         <div className="countryCard">
-            <img src={props.countryFlag} alt="" />
+            <div className="imgHolder" style={{backgroundColor: currentStyle.elementColor}}><img src={props.countryFlag} alt="" /></div>
+            
             <div className="countryCardInfo" style={{backgroundColor: currentStyle.elementColor}}>
                 <h4 style={{color: currentStyle.text}}>{props.countryName}</h4>
                 <p style={{color: currentStyle.text}}>

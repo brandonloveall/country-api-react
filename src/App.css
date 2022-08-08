@@ -3,13 +3,14 @@
 body{
   margin: 0;
   padding: 0;
+  display: flex;
 }
 
 .App{
   display: flex;
-  height: 100%;
   width: 100%;
   flex-flow: column nowrap;
+  flex: 2 0 auto
 }
 
 h2{

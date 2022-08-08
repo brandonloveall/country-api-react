@@ -10,7 +10,7 @@ function CountryPage(props){
     return(
         <div className="countryPage">
             <div className="leftBox">
-                <img src={props.countryList[country].flags.png} alt="" />
+                <img src={props.countryList[country].flags.svg} alt="" />
             </div>
             <div className="rightBox">{props.countryList.country}</div>
         </div>
