@@ -1,9 +1,10 @@
 .countryMenu{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     padding-top: 12px;
     padding-left: 45px;
     padding-right: 45px;
     padding-bottom: 40px;
-    height: 100%;
+    flex-grow: 1;
 }
