@@ -10,6 +10,7 @@ function CountryPage(props){
     let currentStyle = useContext(ThemeContext)
     const realCountry = getRealCountry()
     console.log(realCountry)
+    console.log(Object.entries(realCountry.currencies))
 
     function getLanguages(){
         let answer = ""
@@ -21,6 +22,18 @@ function CountryPage(props){
         return answer
     }
 
+    function getCurrencies(){
+        let currencies = ""
+        Object.entries(realCountry.currencies).map((elem, index) => {
+                if(index === 0){
+                    currencies = elem[1].name
+                }else{
+                    currencies = currencies + ", " + elem[1].name
+                }
+            })
+        return currencies
+    }
+
     function getRealCountry(){
         for(let i = 0; i < props.countryList.length; i++){
             if (props.countryList[i].cca3 === country){
@@ -30,7 +43,7 @@ function CountryPage(props){
     }
 
     function getBorderCountries(){
-
+        
     }
 
     return(
@@ -67,7 +80,7 @@ function CountryPage(props){
                                 <span className="bold">Top Level Domain: </span>{realCountry.tld[0]}
                                 <br />
                                 <br />
-                                <span className="bold">Currencies: </span>{Object.entries(Object.entries(realCountry.currencies)[0])[1][1].name}
+                                <span className="bold">Currencies: </span>{getCurrencies()}
                                 <br />
                                 <br />
                                 <span className="bold">Languages: </span>{getLanguages()}

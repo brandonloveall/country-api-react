@@ -8,3 +8,11 @@
     padding-bottom: 40px;
     flex-grow: 1;
 }
+
+.countryListFlex{
+    display: flex;
+    flex-grow: 1;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
