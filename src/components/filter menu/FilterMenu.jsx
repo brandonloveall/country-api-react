@@ -8,6 +8,7 @@ function FilterMenu() {
     const currentTheme = useContext(ThemeContext)
     const [visible, setVisible] = useState("none")
     const [region, setRegion] = useState("Filter by Region")
+    const [input, setInput] = useState("")
 
     function openMenu(){
         if(visible === "none"){
