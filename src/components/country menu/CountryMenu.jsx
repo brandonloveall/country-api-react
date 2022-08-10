@@ -19,7 +19,7 @@ function CountryMenu() {
             <div className="countryMenu" style={{ backgroundColor: currentTheme.background }}>
                 <Routes>
                     <Route exact path="/" element={<><SearchBar />
-                    {countries.map((elem, index) => {return (<Link to={`/${index}`} key={index}><CountryCard key={index} countryFlag={elem.flags.svg} countryName={elem.name.common} countryPop={elem.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} countryRegion={elem.region} countryCapital={elem.capital} /></Link>)})}</>} />
+                    {countries.map((elem, index) => {return (<Link to={`/${elem.cca3}`} key={index}><CountryCard key={index} countryFlag={elem.flags.svg} countryName={elem.name.common} countryPop={elem.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} countryRegion={elem.region} countryCapital={elem.capital} /></Link>)})}</>} />
                     <Route path="/:country" element={<CountryPage countryList={countries}/>}/>
                 </Routes>
             </div>

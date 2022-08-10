@@ -8,16 +8,29 @@ function CountryPage(props){
 
     let {country} = useParams()
     let currentStyle = useContext(ThemeContext)
-    console.log()
+    const realCountry = getRealCountry()
+    console.log(realCountry)
 
     function getLanguages(){
         let answer = ""
         let countries = ""
-        Object.entries(props.countryList[country].languages).map((elem) => {
+        Object.entries(realCountry.languages).map((elem) => {
             countries = countries + " " + elem[1]
             })
         answer = countries.trim().split(" ").join(", ")
         return answer
+    }
+
+    function getRealCountry(){
+        for(let i = 0; i < props.countryList.length; i++){
+            if (props.countryList[i].cca3 === country){
+                return props.countryList[i]
+            }
+        }
+    }
+
+    function getBorderCountries(){
+
     }
 
     return(
@@ -27,34 +40,34 @@ function CountryPage(props){
             </div>
             <div className="countryBoxes">
                 <div className="leftBox">
-                    <img src={props.countryList[country].flags.svg} alt="" />
+                    <img src={realCountry.flags.svg} alt="" />
                 </div>
                 <div className="rightBox">
-                    <h4 style={{color: currentStyle.text}}>{props.countryList[country].name.common}</h4>
+                    <h4 style={{color: currentStyle.text}}>{realCountry.name.common}</h4>
                     <div className="infoSection">
                         <div className="leftBoxInfo">
                             <p style={{color: currentStyle.text}}>
-                                <span className="bold">Native Name: </span>{Object.entries(props.countryList[country].name.nativeName)[Object.entries(props.countryList[country].name.nativeName).length - 1][1].official}
+                                <span className="bold">Native Name: </span>{Object.entries(realCountry.name.nativeName)[Object.entries(realCountry.name.nativeName).length - 1][1].official}
                                 <br />
                                 <br />
-                                <span className="bold">Population: </span>{props.countryList[country].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+                                <span className="bold">Population: </span>{realCountry.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                                 <br />
                                 <br />
-                                <span className="bold">Region: </span>{props.countryList[country].region}
+                                <span className="bold">Region: </span>{realCountry.region}
                                 <br />
                                 <br />
-                                <span className="bold">Sub Region: </span>{props.countryList[country].subregion}
+                                <span className="bold">Sub Region: </span>{realCountry.subregion}
                                 <br />
                                 <br />
-                                <span className="bold">Capital: </span>{props.countryList[country].capital[0]}
+                                <span className="bold">Capital: </span>{realCountry.capital[0]}
                                 </p>
                         </div>
                         <div className="rightBoxInfo">
                             <p style={{color: currentStyle.text}}>
-                                <span className="bold">Top Level Domain: </span>{props.countryList[country].tld[0]}
+                                <span className="bold">Top Level Domain: </span>{realCountry.tld[0]}
                                 <br />
                                 <br />
-                                <span className="bold">Currencies: </span>{Object.entries(Object.entries(props.countryList[country].currencies)[0])[1][1].name}
+                                <span className="bold">Currencies: </span>{Object.entries(Object.entries(realCountry.currencies)[0])[1][1].name}
                                 <br />
                                 <br />
                                 <span className="bold">Languages: </span>{getLanguages()}
@@ -62,8 +75,8 @@ function CountryPage(props){
                         </div>
                     </div>
                     <div className="borderCountries">
-                        <p style={{color: currentStyle.text}}>Border Countries:</p>
-                        <Link to="/20" className="adjacentCountryButton">France</Link>
+                        <p style={{color: currentStyle.text}}><span className="bold">Border Countries: </span></p>
+                        <Link to="/FRA" className="adjacentCountryButton">France</Link>
                     </div>
                 </div>
             </div>
