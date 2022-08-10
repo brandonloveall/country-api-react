@@ -24,7 +24,7 @@ function CountryMenu() {
         for(let i = 0; i < countries.length; i++){
             if(countries[i].name.common.toLowerCase().match(regex)){
                 if(filter === "Filter By Region"){
-                    answer.push(<Link to={`/${countries[i].cca3}`} key={i}><CountryCard key={i} countryFlag={countries[i].flags.svg} countryName={countries[i].name.common} countryPop={countries[i].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} countryRegion={countries[i].region} countryCapital={countries[i].capital} /></Link>)
+                    answer.push(<div className="countryCardHolder"><Link to={`/${countries[i].cca3}`} key={i}><CountryCard key={i} countryFlag={countries[i].flags.svg} countryName={countries[i].name.common} countryPop={countries[i].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} countryRegion={countries[i].region} countryCapital={countries[i].capital} /></Link></div>)
                 }else if(filter !== ""){
                     if(countries[i].region === filter){
                         answer.push(<Link to={`/${countries[i].cca3}`} key={i}><CountryCard key={i} countryFlag={countries[i].flags.svg} countryName={countries[i].name.common} countryPop={countries[i].population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} countryRegion={countries[i].region} countryCapital={countries[i].capital} /></Link>)

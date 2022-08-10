@@ -16,3 +16,9 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
+.countryCardHolder{
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-bottom: 70px
+}
