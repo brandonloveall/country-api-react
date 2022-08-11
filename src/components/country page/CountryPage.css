@@ -66,7 +66,7 @@ padding-left: 60px;
 }
 
 .rightBox h4{
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 0px;
     padding-left: 63px;
     font-family: "Nunito", sans-serif;
@@ -94,19 +94,45 @@ padding-left: 60px;
 
 .infoSection p{
     font-family: "Nunito", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
 }
 
 .borderCountries{
     padding-left: 65px;
-    height: 28%;
+    height: 25%;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .borderCountries p{
+    font-size: 14px;
     font-family: "Nunito", sans-serif;
+    white-space: nowrap;
+}
+
+.borderCountryButtons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.borderCountryButton{
+    font-size: 14px;
+    padding: 7px;
+    font-weight: 300;
+    font-family: "Nunito", sans-serif;
+    padding-left: 27px;
+    padding-right: 27px;
+    border-radius: 3px;
+}
+
+.borderCountryButtonHolder{
+    margin: 10px;
 }
