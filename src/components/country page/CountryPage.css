@@ -140,11 +140,12 @@ padding-left: 60px;
 @media (max-width:764px){
 
     .countryPage{
-        height: 100%;
+        height: auto;
     }
 
     .countryBoxes{
         flex-flow: column nowrap;
+        height: auto;
     }
 
     .middleSectionCountries{

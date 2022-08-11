@@ -10,7 +10,7 @@ body{
   display: flex;
   width: 100%;
   flex-flow: column nowrap;
-  flex: 2 0 auto
+  flex-grow: 1;
 }
 
 h2{
