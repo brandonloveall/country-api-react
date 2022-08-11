@@ -48,3 +48,22 @@
     padding-left: 80px;
     width: 100%;
   }
+
+  @media (max-width:764px){
+
+    .middleSection{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        padding-left: 0px;
+    }
+
+    .searchBarMain{
+        margin:0px;
+        width: 95%;
+        justify-content: flex-start;
+    }
+    .searchBarMain input{
+        width: 100%;
+    }
+
+}

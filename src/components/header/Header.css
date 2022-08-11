@@ -8,3 +8,15 @@ header{
     justify-content: space-between;
     align-items: center;
   }
+
+  @media (max-width:764px){
+    header{
+      padding: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    header h2{
+      font-size: 15px;
+    }
+
+  }

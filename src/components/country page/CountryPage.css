@@ -136,3 +136,47 @@ padding-left: 60px;
 .borderCountryButtonHolder{
     margin: 10px;
 }
+
+@media (max-width:764px){
+
+    .countryPage{
+        height: 100%;
+    }
+
+    .countryBoxes{
+        flex-flow: column nowrap;
+    }
+
+    .middleSectionCountries{
+        height: 15%;
+        padding-left: 0%;
+    }
+    
+    .leftBox{
+        width: 100%;
+    }
+
+    .infoSection{
+        flex-flow: column nowrap;
+    }
+
+    .rightBox h4{
+        padding-left: 0px;
+        font-size: 25px;
+    }
+
+    .infoSection div{
+        width: 100%;
+    }
+
+    .borderCountries{
+        padding-left: 9%;
+        flex-flow: row wrap;
+        width: 190%;
+    }
+
+    .borderCountryButtons{
+        width: 100%;
+    }
+
+}
