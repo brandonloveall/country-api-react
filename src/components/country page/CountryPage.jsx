@@ -41,9 +41,6 @@ function CountryPage(props){
         }
     }
 
-    console.log(realCountry.borders)
-    console.log(props.countryList[0].name.common)
-
     function getBorderCountries(){
         let answer = []
         for(let i = 0; i < realCountry.borders.length; i++){
