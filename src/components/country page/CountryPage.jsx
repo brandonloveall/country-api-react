@@ -9,7 +9,7 @@ function CountryPage(props){
     let {country} = useParams()
     let currentStyle = useContext(ThemeContext)
     const realCountry = getRealCountry()
-    
+    console.log(props.countryList[1].borders)
 
     function getLanguages(){
         let answer = ""
@@ -43,8 +43,12 @@ function CountryPage(props){
 
     function getBorderCountries(){
         let answer = []
+        if(realCountry.borders === undefined){
+            return answer
+        }
         for(let i = 0; i < realCountry.borders.length; i++){
             for(let j = 0; j < props.countryList.length; j++){
+                
                 if(props.countryList[j].cca3 === realCountry.borders[i]){
                     
                     answer.push(<div className="borderCountryButtonHolder"><Link to={`/${props.countryList[j].cca3}`} className="borderCountryButton" style={{backgroundColor: currentStyle.elementColor, color: currentStyle.text}}>{props.countryList[j].name.common}</Link></div>)

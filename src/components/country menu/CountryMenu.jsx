@@ -14,7 +14,7 @@ function CountryMenu() {
     const [filter, setFilter] = useState("Filter By Region")
 
     useEffect(() => {
-        axios.get("https://restcountries.com/v3.1/all").then((res) => { setCountries(res.data); console.log("running") })
+        axios.get("https://restcountries.com/v3.1/all").then((res) => { setCountries(res.data) })
     }, [])
 
     function displayCountries(){
